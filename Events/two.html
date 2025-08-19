@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="hadding"> click fast</h1>
+    <button id="stop"> stop </button>
+</body>
+<script>
+    // const run = function(){
+    //     console.log("rohit is codding now")
+    // }
+    const clickButton = function(){
+        document.querySelector('#hadding').innerHTML  = 'sharmaji on fire'
+    }
+
+
+    document.querySelector('#stop').addEventListener('click' , function(){
+        clearTimeout(changeText)
+        console.log('stopped');
+    })
+
+    
+    // setTimeout(run ,2000)
+    const changeText = setTimeout(clickButton,1000)
+    
+</script>
+</html> 

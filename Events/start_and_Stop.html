@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hyy dud's</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+</body>
+<script>
+    const colorChange = function(num){
+        return Math.random()*(num+1)
+    }
+    const sayRohit = function(){
+        document.body.style.backgroundColor = `rgb(${colorChange(255)} ${colorChange(255)} ${colorChange(255)})`;
+    }
+
+    document.querySelector('#start').addEventListener('click' , function(){
+        interval = setInterval(sayRohit ,10)
+        console.log('start button is clicked');
+    })
+
+    document.querySelector('#stop').addEventListener('click' , function(){
+        clearInterval(interval)
+        console.log('stop button is clicked');
+    })
+    
+    // clearInterval(interval)
+</script>
+</html>
