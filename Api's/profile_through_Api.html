@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>api's</title>
+</head>
+<body>
+
+    
+</body>
+<script>
+
+    const gitApiUrl =  "https://api.github.com/users/rohitsharma8920";
+    const xhr =  new XMLHttpRequest();
+    xhr.open('GET' ,gitApiUrl);
+    const callMe =xhr.onreadystatechange = function(){
+        console.log(xhr.readyState)
+       
+        if(xhr.readyState === 4){
+            var data = JSON.parse(this.responseText);
+            console.log(data.avatar_url);
+             return data.avatar_url;
+        }
+    }
+
+    // console.log(xhr.readyState);
+    xhr.send();
+
+
+    // Creating h1 tag.
+    const newHadding = document.createElement('h1');
+    // insert data into h1 tag.
+    newHadding.innerHTML = "Rohit Sharma";
+    newHadding.style.color ='green';
+    // append h1 into body.
+    document.body.appendChild(newHadding)
+
+
+    
+    //create image tag
+    const image = document.createElement('img');
+    // adding attributes.
+    image.src = callMe;
+    image.id = 'profile_Image';
+    image.width ='200px';
+    // append with body tag
+    document.body.appendChild(image);
+
+</script>
+</html>

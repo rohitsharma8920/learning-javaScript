@@ -12,15 +12,12 @@
 
 </body>
 <script>
-    const colorChange = function(num){
-        return Math.random()*(num+1)
-    }
     const sayRohit = function(){
-        document.body.style.backgroundColor = `rgb(${colorChange(255)} ${colorChange(255)} ${colorChange(255)})`;
+        console.log('hello rohit',Date.now())
     }
 
     document.querySelector('#start').addEventListener('click' , function(){
-        interval = setInterval(sayRohit ,10)
+        interval = setInterval(sayRohit ,1000)
         console.log('start button is clicked');
     })
 
